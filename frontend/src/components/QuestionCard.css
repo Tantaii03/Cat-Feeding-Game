@@ -1,0 +1,131 @@
+.question-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  background: #292434 !important;
+  border: 1px solid #494052;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 20px auto;
+}
+
+.question-label {
+  color: #c9bfd4 !important;
+}
+
+.vocabulary-word {
+  font-size: 36px;
+  color: #ffb84d !important;
+  margin: 15px 0;
+}
+
+.vocabulary-emoji {
+  font-size: 65px;
+  margin: 15px 0 25px;
+}
+
+.answer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.answer-option {
+  padding: 15px;
+  border: 2px solid #494052 !important;
+  border-radius: 12px;
+  background: #383244 !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.answer-option:hover:not(:disabled) {
+  border-color: #ffb84d !important;
+  background: #494052 !important;
+}
+
+.answer-option.selected {
+  border-color: #ffad33 !important;
+  background: #59432d !important;
+  color: #ffcf85 !important;
+}
+
+.answer-option:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 14px;
+  background: #ffad33 !important;
+  color: #241a10 !important;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.answer-feedback {
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.answer-feedback.correct {
+  background: #193d2c !important;
+  color: #8ce6a9 !important;
+}
+
+.answer-feedback.incorrect {
+  background: #49272d !important;
+  color: #ffaaaa !important;
+}
+
+/* ===== ส่วนปุ่มลองอีกครั้ง ===== */
+.retry-section {
+  margin-top: 15px;
+}
+
+.retry-section .answer-feedback {
+  margin-top: 0;
+}
+
+.question-card .retry-section .retry-button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 14px;
+  background: #ffad33 !important;
+  color: #241a10 !important;
+  font-size: 20px !important;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 173, 51, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.question-card .retry-section .retry-button:hover {
+  background: #ffb84d !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 173, 51, 0.5);
+}
+
+.question-card .retry-section .retry-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 173, 51, 0.35);
+}

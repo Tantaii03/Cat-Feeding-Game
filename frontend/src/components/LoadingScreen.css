@@ -1,0 +1,110 @@
+
+.loading-screen {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  box-sizing: border-box;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background: #fff0f5;
+  overflow: hidden;
+}
+
+/* ภาพหน้า Loading */
+.loading-image {
+  display: block;
+
+  width: 100%;
+  max-width: 1000px;
+
+  height: auto;
+  max-height: calc(100svh - 150px);
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ส่วนแสดงเปอร์เซ็นต์ */
+.loading-progress {
+  width: 90%;
+  max-width: 600px;
+  flex-shrink: 0;
+}
+
+.loading-text {
+  display: flex;
+  justify-content: space-between;
+
+  color: #743b70;
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 16px;
+
+  background: #ead1dc;
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #ff9ecb,
+    #ffc857
+  );
+
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* หน้าจอมือถือ */
+@media (max-width: 600px) {
+  .loading-screen {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .loading-image {
+    max-height: calc(100svh - 120px);
+  }
+
+  .loading-progress {
+    width: 95%;
+  }
+
+  .loading-text {
+    font-size: 15px;
+  }
+}
+
+/* หน้าจอเตี้ย เช่น มือถือแนวนอน */
+@media (max-height: 500px) {
+  .loading-screen {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .loading-image {
+    width: auto;
+    max-width: 70%;
+    max-height: calc(100svh - 30px);
+  }
+
+  .loading-progress {
+    max-width: 250px;
+  }
+}

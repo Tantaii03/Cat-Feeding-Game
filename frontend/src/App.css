@@ -1,0 +1,63 @@
+
+.feed-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 450px;
+  min-height: 75px;
+
+  margin: 15px auto;
+  padding: 14px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ffcf70,
+    #ff9e35
+  );
+
+  color: #492b12;
+  border: 3px solid #ffe0a3;
+  border-radius: 20px;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 0 #c87522,
+    0 10px 20px rgba(255, 173, 51, 0.2);
+
+  transition: all 0.2s ease;
+  animation: feed-pulse 2s ease-in-out infinite;
+}
+
+.feed-button:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(
+    135deg,
+    #ffdb91,
+    #ffae4c
+  );
+
+  box-shadow:
+    0 9px 0 #c87522,
+    0 14px 25px rgba(255, 173, 51, 0.3);
+}
+
+.feed-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #c87522;
+}
+
+@keyframes feed-pulse {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.08);
+  }
+}
